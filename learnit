@@ -1,0 +1,25 @@
+import random as r
+
+rate=0
+for round in range(0,10):
+    verb = r.randint(0,2)
+    pron = r.randint(0,5)
+    apron = ["yo", "tú", "él", "nosotros", "vosotros", "ellos"]
+    averb = ["ser:", "estar:", "tener:"]
+    a_ans = ["soy", "eres", "es","somos", "sois", "son"]
+    b_ans = ["estoy", "estás", "está", "estamos", "estáis", "están"]
+    c_ans = ["tengo", "tienes", "tiene", "tenemos", "tenéis", "tenen"]
+    if verb == 0:
+        r_ans = a_ans[pron]
+    elif verb == 1:
+        r_ans = b_ans[pron]
+    elif verb == 2:
+        r_ans = c_ans[pron]
+    print(averb[verb], apron[pron], end="")
+    y = input(" ")
+    if r_ans == y:
+        print("¡Muy bien!")
+        rate = rate+1
+    else:
+        print("¡Tu eres un idiot!")
+print(rate/10*100, "%")
