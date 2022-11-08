@@ -17,7 +17,7 @@ for round in range(0,10):
         r_ans = c_ans[pron]
     print(averb[verb], apron[pron], end="")
     y = input(" ")
-    if r_ans == y:
+    if r_ans == str(y):
         print("¡Muy bien!")
         rate = rate+1
     else:
